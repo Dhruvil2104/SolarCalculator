@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Calculator</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <main>
+        <header class="page_title">
+            <h1 class="text-center">Solar Calculator</h1>
+        </header>
+
+        <!-- Step 1 : Get Location -->
+        <div class="section section_location">
+            <div class="container">
+                <div class="row">
+                    <div class="form-group mx-auto mt-5 col-6 text-center">
+                        <label class="sr-only">Enter your location</label>
+                        
+                        <input value="Boston" placeholder="Enter your location" id="place_search" class="input-group" type="text" name="map_locate" />
+                        <small class="d-inline-block mt-2"><em><strong>Note : </strong> Locations accepted within United States.</em></small>
+
+                        <div class="action_box">
+                            <button onClick="locateOnMap();" class="mt-4 btn btn-primary">Evaluate Area</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section section_area pt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-9">
+                        <div id="map" class="map_box"></div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="card calc_box">
+                            <div class="card-body">
+                                <div class="area_block">
+                                    <strong>Area:</strong>
+                                    <span class="meter_square">0</span>
+                                    <span>m<sup>2</sup></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card calc_box">
+                            <div class="card-body">
+                                <div class="area_block">
+                                    <strong>Nominal Power (kWdc):</strong>
+                                    <span class="nom_power">0</span>
+                                    <span>kWdc</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="modal fade">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-title">
+                    Warning!
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>        
+                </div>
+                <div class="modal-body text-center">
+                    <div class="modal-text"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    
+    <!-- Third Party Libraries -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/custom.js"></script>
+
+    <!-- Google Map API -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCR42GzAdOvmHFksG885zjAkyVlSZ7gock&callback=initMap&libraries=places&libraries=drawing"></script>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&display=swap');
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+h1, h2, h3 { font-weight: 500; }
+
+label { font-size: 18px; margin-bottom: 15px; }
+
+input[type="text"] {
+  border-radius: 50px;
+  border: 1px solid #ddd;
+  outline: none;
+  padding: 15px 20px;
+  min-width: 300px;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+/*Page Styles*/
+
+.page_title {
+  margin-top: 32px;
+}
+
+.page_title h1 {
+  margin-bottom: 0;
+}
+
+small strong { font-weight: 500; }
+
+button, .btn.active, .btn:active, .btn.focus, .btn:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.action_box button { min-width: 260px; }
+
+.section_area {
+  display: none;
+  margin-bottom: 50px;
+}
+
+.map_box {
+  width:100%;
+  min-height: 500px;
+  background: #eee;
+}
+
+/*Calc Cards*/
+.calc_box { display: none; }
+
+/*Modal Design*/
+.modal-content { overflow: hidden; }
+.modal-title {
+  padding: 10px 15px;
+  background: #dddddd;
+}
+.modal { text-align: center; }
+.modal-dialog { display: inline-block; width: auto; max-width: unset; text-align: left; }
